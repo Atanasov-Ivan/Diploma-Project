@@ -1,0 +1,9 @@
+<app-catalog-item-add (productSaved)="productSaved($event)"></app-catalog-item-add>
+<ng-container *ngIf="catalog != null && catalog.length > 0">
+    <div class="catalog-title"><p>Каталог</p></div>
+    <ul>
+        <li  *ngFor="let product of catalog">
+            <app-catalog-item [product]="product"></app-catalog-item>
+        </li>
+    </ul>
+</ng-container>

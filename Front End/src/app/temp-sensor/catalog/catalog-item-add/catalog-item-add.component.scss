@@ -1,0 +1,72 @@
+.container {
+    width: 700px;
+    margin-top: 150px;
+}
+
+.add-product-title {
+    font-size: 30px;
+}
+
+.form-group>label {
+    display: inline-block;
+    font-weight: 500;
+    width: 220px;
+}
+
+.form-group>.product-field {
+    width: 200px;
+    display: inline-block;
+}
+
+app-image-uploader {
+    margin-left: 15px
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.form-fields {
+    margin-right: 5px;
+    margin-top: 35px;
+}
+
+.form-group {
+    flex-grow: 3;
+}
+
+.form-group>textarea {
+    width: 680px;
+    height: 100px;
+}
+
+#button-holder {
+    float: right;
+    margin-right: -10px;
+}
+
+#button-holder>button {
+    background-color: #FF9E12;
+    color: white;
+    width: 147px;
+    height: 39px;
+}
+
+.product-name {
+    width: 420px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}

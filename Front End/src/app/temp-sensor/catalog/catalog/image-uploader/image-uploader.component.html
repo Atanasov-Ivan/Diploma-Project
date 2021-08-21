@@ -1,0 +1,12 @@
+<a class='camera-wrap'>
+  <div>
+    <img *ngIf="url!=null" [src]="url" #img>
+    <div class="fill">
+      <span *ngIf="url==null" class='camera' #camera></span>
+      <div class="input">
+        <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+        <button (click)="fileInput.click()">Select File</button>
+      </div>
+    </div>
+  </div>
+</a>

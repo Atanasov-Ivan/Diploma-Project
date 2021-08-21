@@ -1,0 +1,8 @@
+<div class="alert alert-info info" #info>
+    <strong>Info!</strong> Automode for {{control.name}} device is Enable
+</div>
+<div class="buttons">
+    <button type="button" [disabled]="isAutoMode" class="btn btn-success" (click)="toggle('on')"><i class="material-icons material-icons.md-18">power</i>Вкл. {{control.name}} </button>
+    <button type="button" [disabled]="isAutoMode" class="btn btn-danger" (click)="toggle('off')"><i  class="material-icons material-icons.md-18">power_off</i>Изкл. {{control.name}} </button>
+    <button type="button" class="btn btn-info" (click)="toggle('auto')"><i  class="material-icons material-icons.md-18">autorenew</i>Превключване на {{control.name}} Автоматичен режим</button>
+</div>

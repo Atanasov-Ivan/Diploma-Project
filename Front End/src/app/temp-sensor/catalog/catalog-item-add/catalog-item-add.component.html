@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="add-product-title">Добаване на продукт</div>
+    <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+        <fieldset class="text-white">
+            <div class="row">
+                <app-image-uploader class="form-group" (imageChosen)="imageChosen($event)"></app-image-uploader>
+                <div class="form-fields">
+                    <div class="form-group">
+                        <input type="text" class="form-control product-name" formControlName="productName" id="productName" placeholder="Добаваня име на продукта">
+                    </div>
+                    <div class="form-group">
+                        <label for="minTemp">Минималната температура (°C)</label>
+                        <input type="number" class="form-control product-field" formControlName="minTemp" id="minTemp" placeholder="0-50">
+                    </div>
+                    <div class="form-group">
+                        <label for="maxTemp">Максимална температура (°C)</label>
+                        <input type="number" class="form-control product-field" formControlName="maxTemp" id="maxTemp" placeholder="0-50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="airHumidity">Влажност на въздуха (%)</label>
+                        <input type="number" class="form-control product-field" formControlName="airHumidity" id="airHumidity" placeholder="0-100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="groundHumidity">Влажност на почвата (%)</label>
+                        <input type="number" class="form-control product-field" formControlName="groundHumidity" id="groundHumidity" placeholder="0-100">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="field-title text-border">Записки</label>
+                <textarea class="form-control rounded-1 col" formControlName="notes" id="notes"></textarea>
+            </div>
+
+        </fieldset>
+        <div id="button-holder">
+            <button type="submit" class="btn ">Добави</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<div class="sensors-title">Измервания от сензорите<i *ngIf="product != null"> за "{{product.name}}"</i></div>
+<div class="gauges">
+    <google-chart #tempChart [title]="tempChat.title" [type]="tempChat.type" [data]="tempChat.data"
+        [options]="tempChat.options">
+    </google-chart>
+    <google-chart #humidityChart [title]="humChart.title" [type]="humChart.type" [data]="humChart.data"
+        [options]="humChart.options">
+    </google-chart>
+    <google-chart #dirtChar [title]="dirtChart.title" [type]="dirtChart.type" [data]="dirtChart.data"
+        [options]="dirtChart.options">
+    </google-chart>
+    <google-chart #gasChar [title]="gasChart.title" [type]="gasChart.type" [data]="gasChart.data"
+        [options]="gasChart.options">
+    </google-chart>
+    <br>
+</div>
+
+
+
+<div class="info-boxes">
+    <div class="alert alert-danger danger" #temp>
+    </div>
+    <div class="alert alert-danger danger" #humidity>
+    </div>
+    <div class="alert alert-danger danger" #dirt>
+    </div>
+    <div class="alert alert-danger danger" #gas>
+    </div>
+</div>
+
+<div class="controls-title">Контрол на устройствата</div>
+<div class="controls">
+    <ul>
+        <li *ngFor="let control of controls">
+            <app-controls [control]="control"></app-controls>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,42 @@
+.home-container{
+    width: 340px;
+    margin-top:10%;
+    margin-left: 60px;
+    color:#104055
+}
+h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.home-text{
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.drop-down-button{
+    background-color:#FF9E12;
+    width: 130px;
+    height: 39px;
+    color: white;
+    font-size: 16px;
+}
+.btn-group{
+    margin-left: 5px;
+}
+.drop-down-button:hover{
+    background-color: #fda831 ;
+}
+
+.not-items-found{
+    width: 260px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.list-item{
+    font-weight: 500;
+}
+
+.list-item:hover{
+    cursor: pointer;
+}

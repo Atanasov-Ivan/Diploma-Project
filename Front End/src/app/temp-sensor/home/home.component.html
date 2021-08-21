@@ -1,0 +1,26 @@
+<div class="home-container">
+    <h2>Умна Градина</h2>
+    <div class="home-text">
+        Ние предлагаме услуги за грижи на вашата градина по критерии зададен от вас.
+    </div>
+    <div class="home-text">
+        Изберете вашият продукт от 
+        <div class="btn-group">
+            <button class="btn dropdown-toggle drop-down-button" data-toggle="dropdown" href="#">
+                Каталога
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+               <div class="not-items-found" *ngIf="products == null || products.length == 0">
+                   <li>Няма добавени продукти
+                       <br>
+                       <a class="add" href="catalog">+Добави</a>
+                   </li>
+               </div>
+               <li *ngFor="let product of products">
+                <a class="list-item" [routerLink]="['/sensors', product.name]">{{product.name}}</a>
+            </li>
+            </ul>
+        </div>
+    </div>
+</div>
